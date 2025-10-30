@@ -102,6 +102,9 @@ hr {
   .welcome-message {
     font-size: 15px;
   }
+  .welcome_text{
+    font-size:25 ;
+  }
 }
 .welcome_text{
     text-align: center;
