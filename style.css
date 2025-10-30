@@ -62,6 +62,7 @@ hr {
     height: auto;            /* preserve aspect ratio and show full image */
     display: block;
     object-fit: contain;
+         /* limit very tall images on large screens */
   }
 
   /* center existing content over the image */
@@ -97,8 +98,14 @@ hr {
   font-style: normal;
   color: azure;
 }
+@media (max-width: 768px) {
+  .welcome-message {
+    font-size: 15px;
+  }
+}
 .welcome_text{
     text-align: center;
+    margin-top: -40px;
     font-size: 50px;
     color: azure;
 }
@@ -158,5 +165,14 @@ a {
   font-optical-sizing: auto;
   font-weight: 20px;
   font-style: normal;
-  color: rgb(217, 125, 76);
+  color: black;
         }
+.themed_text{
+  color: rgb(217, 125, 76)!important;
+  text-align: center;
+    font-size: 20px;
+      font-family: "Chiron Sung HK", serif;
+  font-optical-sizing: auto;
+  font-weight: 20px;
+  font-style: normal;
+}
