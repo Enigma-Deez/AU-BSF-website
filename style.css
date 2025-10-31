@@ -250,6 +250,22 @@ footer .container .bottom{ width: 100%; margin-top: 18px; text-align: center; }
   footer .container .grid{ flex-direction: column; }
   footer .container .grid > div{ min-width: auto; }
 }
+
+/* Tighten footer spacing on small screens to make items compact */
+@media (max-width: 768px) {
+  footer{ padding: 10px 12px; }
+  footer .container .grid{ gap: 8px; }
+  footer .container .grid > div{
+    padding: 6px 4px; /* reduce internal padding */
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+  footer .container .grid h3{ margin: 0 0 6px 0; font-size: 16px; }
+  footer .container .grid p, footer .container .grid ul{ margin: 0 0 6px 0; padding: 0; }
+  footer .container .grid ul{ list-style: none; }
+  footer .container .grid ul li{ margin: 4px 0; }
+  footer .container .bottom{ margin-top: 8px; font-size: 13px; }
+}
 .white-box {
     background-color: white;
     color: black;
