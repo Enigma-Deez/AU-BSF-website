@@ -173,6 +173,7 @@ hr {
   .start-btn:hover {
     background: rgb(200, 115, 66);
   }
+
 a {
   text-decoration: none;   /* removes underline */
   color: inherit;          /* makes links take parent text color */
@@ -348,16 +349,17 @@ footer .contact .material-icons {
   margin-right: 0.5rem;
 }
 
-footer .social {
-  display: flex;
-  gap: 1rem;
+.social a{
+  font-size: 30px;
+  color: rgb(245, 245, 220);
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-footer .social svg {
-  width: 1.5rem;
-  height: 1.5rem;
-}
 
+social a:hover {
+  color: rgb(217, 125, 76);
+}
 footer .bottom {
   margin-top: 2rem;
   padding-top: 2rem;
@@ -443,4 +445,8 @@ footer .container {
 
 .story-link:hover {
   text-decoration: underline;
+}
+.card i{
+  font-size: 50px;
+  color: rgb(217, 125, 76);
 }
