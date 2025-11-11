@@ -1,452 +1,59 @@
-a:hover,
-a:visited,
-a:active {
-  text-decoration: none;   /* stays clean on hover, active, and visited */
-  color: inherit;          /* prevents blue or purple color */
-}
-hr {
-  border: none;
-  height: 1px;
-  background: linear-gradient(to right, transparent, #999, transparent);
-  margin: 25px 0;
-}
-body {
-    margin: 0;
-}
-hr {
-    margin: 5px 0;  /* reduces spacing above & below hr */
-}
-.wrapper{
-  background-color: rgb(245, 245, 220);
-}
-#centertext{
-    text-align: center;
-      font-family: "Chiron Sung HK", serif;
-  font-optical-sizing: auto;
-  font-weight: 10px;
-  font-style: normal;
-}
-.Menu{
-  display: flex;
-  align-items: center; /* keeps them vertically aligned */
-  padding: 6px 8px; 
+/* Make sure body and html take full height */
+html, body {
+  height: 100%;
   margin: 0;
-  gap: 8px; /* adds space between them */
+  padding: 0;
 }
+
+/* Navigation bar styling */
+.navpanel {
+  position: relative;
+  z-index: 10;
+  background: white;
+  padding: 12px 0;
+}
+
 .navbar {
   display: flex;
-  font-size: 13px;
-  justify-content: center; /* or space-between / space-around / space-evenly */
-  gap: 18px; /* reduced spacing so menu is more compact */
-}
- .navbar a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    transition: color 0.3s;
-  }
-  .navbar a:hover {
-    color: rgb(217, 125, 76);
-  }
-  .welcome{
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    background: transparent;
-    margin-top: 10px; /* nudge welcome section closer to the header */
-  }
-
-  /* image inside .welcome should be visible and limited in height on large viewports */
-  .welcome-img{
-    width: 100%;
-    height: auto;            /* preserve aspect ratio */
-    display: block;
-    object-fit: cover;       /* cover keeps a nice fill for wide screens */
-    max-height: 70vh;        /* limit very tall images on large screens */
-  }
-
-  /* center existing content over the image on large screens */
-  .welcome-content{
-    position: absolute;
-    inset: 0; /* top:0; right:0; bottom:0; left:0 */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 18px;
-    box-sizing: border-box;
-  }
-
-  /* keep children interactive when overlayed */
-  .welcome-content > * { pointer-events: auto; }
-.Navpanel {
-    padding: 6px 12px;       /* small padding so nav doesn't look too large */
-    margin: 0;               /* removes outer margin */
-}
-.Logo img{
-  width: auto;
-  height: 48px;
-    object-fit: contain;
-}
-.welcome_message{
-    text-align: center;
-    font-size: 20px;
-      font-family: "Chiron Sung HK", serif;
-  font-optical-sizing: auto;
-  font-weight: 20px;
-  font-style: normal;
-  color: #fff; /* restore white text for overlay by default */
-}
-
-/* Base styles for the action button so it works on all viewports */
-.start-btn{
-  display: inline-block;
-  padding: 8px 18px;
-  background: rgb(217, 125, 76);
-  color: #fff;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: background 0.2s ease, transform 0.12s ease;
-  cursor: pointer;
-}
-.start-btn:focus{ outline: 2px solid rgba(217,125,76,0.35); outline-offset: 2px; }
-/* mobile rules for welcome are defined in a responsive block */
-@media (max-width: 768px) {
-  .welcome{
-    overflow: visible; /* allow content below image to be fully visible */
-  }
-}
-
-  .welcome-img{
-    max-height: 40vh;      /* shorter image height on small screens so content fits */
-    object-fit: cover;     /* fill the area while keeping aspect — will crop minimally */
-    display: block;
-    width: 100%;
-  }
-
-  .welcome-content{
-    position: absolute;    /* float (overlay) on mobile as requested */
-    left: 12px;
-    right: 12px;
-    bottom: 12px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-    padding: 12px;
-    background: rgba(0,0,0,0.45); /* translucent dark background for readability */
-    border-radius: 8px;
-    z-index: 5;
-    pointer-events: auto;   /* allow interactions */
-  }
-
-  .welcome_text{
-    font-size: 30px;
-    margin: 0;
-    color: rgb(217, 125, 76)!important;
-    text-align: center;
-  }
-
-  
-  .welcome_message{
-    font-size: 14px;
-    margin: 0;
-    color: #fff;
-  }
-
-  /* shrink nav gaps a bit more on small screens */
-  .navbar{
-    gap: 10px;
-    font-size: 14px;
-  }
-
-  .Logo img{ height: 40px; }
-
-  .start-btn{
-    display: inline-block;
-    margin-top: 8px;
-    padding: 8px 16px;
-  }
-
-  .start-btn:hover {
-    background: rgb(200, 115, 66);
-  }
-
-a {
-  text-decoration: none;   /* removes underline */
-  color: inherit;          /* makes links take parent text color */
-}
-.start{
-  text-align: center;
-  
-}
-        .card-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-.unique{
-  background-color: #f5f5dc;
-}
-        .card {
-            background: #fff;
-            border-radius: 16px;
-            padding: 30px 20px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-        }
-    /* Ensure images inside cards fit their container and keep proportions */
-    .card img,
-    .card-2 img {
-      width: 100%;
-      height: 180px; /* fixed display height so cards remain consistent */
-      object-fit: cover; /* crop nicely while preserving aspect ratio */
-      display: block;
-      border-radius: 12px;
-      margin: 0 0 12px 0;
-    }
-
-    @media (max-width: 480px) {
-      .card img,
-      .card-2 img {
-        height: 120px; /* shorter on small screens */
-      }
-    }
-        .event_text{
-          color: rgb(147, 171, 151);
-        }
-        .happening{
-          text-align: center;
-    font-size: 40px;
-      font-family: "Chiron Sung HK", serif;
-  font-optical-sizing: auto;
-  font-weight: 20px;
-  font-style: normal;
-  color: black;
-        }
-.themed_text{
-  color: rgb(217, 125, 76)!important;
-  text-align: center;
-    font-size: 20px;
-      font-family: "Chiron Sung HK", serif;
-  font-optical-sizing: auto;
-  font-weight: 20px;
-  font-style: normal;
-}
-
-/* Footer layout: columns side-by-side on wide screens, stacked on small screens */
-/* Footer layout: support the structure used in index.html (.container > .grid > div) */
-footer{
-  padding: 28px 20px;
-}
-
-/* make the .grid inside footer lay out its direct child divs in a row */
-footer .container .grid{
-  display: flex;
-  gap: 24px;
-  align-items: flex-start;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-footer .container .grid > div{
-  flex: 1 1 220px; /* grow, shrink, base width 220px */
-  min-width: 160px;
-}
-
-footer .container .bottom{ width: 100%; margin-top: 18px; text-align: center; }
-
-@media (max-width: 768px){
-  footer .container .grid{ flex-direction: column; }
-  footer .container .grid > div{ min-width: auto; }
-}
-
-/* Tighten footer spacing on small screens to make items compact */
-@media (max-width: 768px) {
-  footer{ padding: 10px 12px; }
-  footer .container .grid{ gap: 8px; }
-  footer .container .grid > div{
-    padding: 6px 4px; /* reduce internal padding */
-    flex: 1 1 auto;
-    min-width: 0;
-  }
-  footer .container .grid h3{ margin: 0 0 6px 0; font-size: 16px; }
-  footer .container .grid p, footer .container .grid ul{ margin: 0 0 6px 0; padding: 0; }
-  footer .container .grid ul{ list-style: none; }
-  footer .container .grid ul li{ margin: 4px 0; }
-  footer .container .bottom{ margin-top: 8px; font-size: 13px; }
-}
-.white-box {
-    background-color: white;
-    color: black;
-}   
-
-        .card-2 {
-            background:#f5f5dc;
-            border-radius: 16px;
-            padding: 30px 20px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .card-2:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-        }
-        footer h3 {
-  margin-bottom: 1rem;
-  font-family: var(--font-display, 'Poppins', sans-serif);
-}
-
-footer h3.text-xl { font-size: 1.25rem; font-weight: 700; }
-footer h3.text-lg { font-size: 1.125rem; font-weight: 600; }
-
-footer p,
-footer a,
-footer li {
-  color: #f5f5dc; /* gray-400 */
-  font-size: 0.95rem;
-}
-.footer_copyright{
-  color:#f5f5dc;
-}
-footer a {
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-footer a:hover {
-  color: rgb(217, 125, 76);
-}
-
-footer ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-footer ul.space-y-2 li {
-  margin-bottom: 0.5rem;
-}
-
-footer .contact li {
-  display: flex;
-  align-items: center;
-}
-
-footer .contact .material-icons {
-  margin-right: 0.5rem;
-}
-
-.social a{
-  font-size: 30px;
-  color: rgb(245, 245, 220);
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-
-social a:hover {
-  color: rgb(217, 125, 76);
-}
-footer .bottom {
-  margin-top: 2rem;
-  padding-top: 2rem;
-  border-top: 1px solid #374151; /* gray-700 */
-  text-align: center;
-  color: rgb(217, 125, 76);
-  font-size: 0.9rem;
-}
-footer {
-  background-color: rgb(147, 171, 151); /* gray-800 */
-  color: white;
-  font-family: 'Inter', sans-serif;
-}
-
-footer .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 3rem 1.5rem;
-}
-
-/* footer .grid is handled earlier with flexbox rules to lay columns side-by-side */
-
-
-
-
-.testimony-section {
-  text-align: center;
-  background: white;
-  padding: 60px 20px;
-  font-family: serif;
-}
-
-.testimony-section h2 {
-  font-size: 34px;
-  margin-bottom: 40px;
-}
-
-.profiles {
-  display: flex;
   justify-content: center;
-  gap: 25px;
-  margin-bottom: 35px;
-  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0 15px;
 }
 
-.profile {
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  object-fit: cover;
-  cursor: pointer;
-  border: 3px solid transparent;
-  transition: 0.3s;
-}
-
-.profile.active {
-  border: 4px solid rgb(217, 125, 76); /* highlight orange */
-  transform: scale(1.1);
-}
-
-.text-box h3 {
-  font-size: 22px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.text-box p {
-  font-style: italic;
-  max-width: 700px;
-  margin: 0 auto 15px;
-  font-size: 18px;
-  line-height: 1.5;
-}
-
-.story-link {
-  display: inline-block;
-  font-size: 18px;
-  color: rgb(217, 125, 76);
+.navbar a {
   text-decoration: none;
-  font-weight: bold;
-  margin-top: 8px;
+  color: #333;
+  font-weight: 500;
 }
 
-.story-link:hover {
-  text-decoration: underline;
+/* First section with sheep image using viewport sizes for styling */
+.hero-image {
+  width: 100%;
+  height: 100vh; /* full viewport height for desktop */
+  overflow: hidden;
+  position: relative;
 }
-.card i{
-  font-size: 50px;
-  color: rgb(217, 125, 76);
+
+/* To keep image proportional */
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Mobile / smaller devices */
+@media (max-width: 768px) {
+  .hero-image {
+    height: 50vh; /* 50% of viewport height on mobile */
+  }
+  
+  .navbar {
+    gap: 15px;
+    font-size: 14px;
+  }
+}
+
+.navpanel{
+  background-color: black;
 }

@@ -1,7 +1,2 @@
-# AU-BSF-website
+# AU-BSF-website V02
 Website for school Baptist fellowhsip
-Image sources
-Unsplash
-AU-BSF archives
-Fonts
-Google fonts
