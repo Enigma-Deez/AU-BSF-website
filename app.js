@@ -1,32 +1,23 @@
-// Mobile menu toggle
-(function(){
-            const btn = document.querySelector('.hamburger');
-            const menu = document.getElementById('mobile-menu');
-            const backdrop = document.getElementById('menu-backdrop');
-            if(!btn || !menu || !backdrop) return;
+//Hamburger menu
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
 
-            function openMenu(){
-                btn.classList.add('is-active');
-                btn.setAttribute('aria-expanded','true');
-                menu.classList.add('open');
-                backdrop.classList.add('open');
-                menu.setAttribute('aria-hidden','false');
-                backdrop.setAttribute('aria-hidden','false');
-            }
-            function closeMenu(){
-                btn.classList.remove('is-active');
-                btn.setAttribute('aria-expanded','false');
-                menu.classList.remove('open');
-                backdrop.classList.remove('open');
-                menu.setAttribute('aria-hidden','true');
-                backdrop.setAttribute('aria-hidden','true');
-            }
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    mobileMenu.classList.toggle('active');
 
-            btn.addEventListener('click', function(){
-                const open = btn.classList.contains('is-active');
-                (open? closeMenu : openMenu)();
-            });
-            backdrop.addEventListener('click', closeMenu);
-            // close on Escape
-            document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closeMenu(); });
-        })();
+    // Update ARIA attributes for accessibility
+    const isOpen = hamburger.classList.contains('active');
+    hamburger.setAttribute('aria-expanded', isOpen);
+    mobileMenu.setAttribute('aria-hidden', !isOpen);
+});
+
+// Close menu when clicking on a link
+mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        mobileMenu.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+        mobileMenu.setAttribute('aria-hidden', 'true');
+    });
+});

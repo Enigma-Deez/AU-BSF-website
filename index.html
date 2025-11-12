@@ -24,7 +24,6 @@
     <div class="wrapper">
         <header>
             <div class="hero-image">
-                <!-- Navbar placed on top of the hero image (kept inside a container) -->
                 <nav class="navpanel" aria-label="Main navigation">
                     <div class="nav-container">
                         <div class="logo">
@@ -40,15 +39,35 @@
                         </div>
                     </div>
                 </nav>
+                    <!-- Hamburger Icon for mobile -->
+                    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
                 <img src="./Assets/Shepherding.jpg" alt="">
                 <div class="section1">
-                    <h3>Church For People Like You</h3>
-                    <h2></h2>
+                    <h3>Church For People Like <span class="section1-you">You</span></h3>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary">Plan Your Visit</button>
+                        <button class="btn btn-secondary">About Us</button>
+                    </div>
+
                 </div>
             </div>
         </header>
 
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+            <a href="#">New Here?</a>
+            <a href="">Who We Are</a>
+            <a href="">Events</a>
+            <a href="">Give</a>
+            <a href="">Worship</a>
+        </div>
+
     </div>
+    <script src="app.js"></script>       
 </body>
 
 </html>
