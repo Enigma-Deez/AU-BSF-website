@@ -549,8 +549,9 @@ footer {
 
     .footer-title {
       font-weight: 700;
-      font-size: 1.1rem;
+      font-size: 0.7rem;
       margin-bottom: 5px;
+      color: white;
     }
 
     .footer-text {
