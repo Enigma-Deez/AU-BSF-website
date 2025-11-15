@@ -316,12 +316,6 @@ footer {
     font-size: 24px;
   }
 
-  /* Hero Image */
-  .hero-image {
-    height: 50vh;
-    overflow: hidden;
-  }
-
   /* Section1 Overlay */
   .section1 {
     position: absolute;
@@ -329,18 +323,21 @@ footer {
     margin: 0;
     color: #fff;
     text-shadow: 0 2px 10px rgba(0,0,0,0.6);
-    width: calc(100% - 30px);
-    padding: 20px 15px;
+    width: calc(100% - 20px);
+    padding: 10px 5px;
     left: 50%;
-    top: 30%;
+    top: 50%;
     z-index: 10;
   }
 
   .section1 h3 {
-    font-size: 20px;
+    font-size: 11px;
     white-space: normal;
     display: block;
-    margin: 0 0 10px 0;
+    margin: 0 0 4px 0;
+    line-height: 1.15;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 
   .section1-you {
@@ -355,9 +352,9 @@ footer {
 
   .btn {
     width: 100%;
-    max-width: 280px;
-    padding: 0.7rem 1.5rem;
-    font-size: 0.9rem;
+    max-width: 240px;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
   }
 
   /* Replica Section */
@@ -384,6 +381,12 @@ footer {
   width: 100%;
   height: 100vh; /* full viewport height for desktop */
   position: relative;
+}
+
+@media (max-width: 768px) {
+  .hero-image {
+    height: 75vh; /* 3/4 of screen for mobile */
+  }
 }
 
 header {
@@ -418,10 +421,12 @@ header {
 .section1 h2{ font-size: 40px; margin: 0; font-weight: 700; }
 .section1 h4{font-size: 70px; margin: 0 0 6px 0; font-weight: 600; color: #a4d96c;}
 
-/* keep the section1 heading on a single line */
-.section1 h3{
-  white-space: nowrap;
-  display: inline-block;
+/* keep the section1 heading on a single line on desktop only */
+@media (min-width: 769px) {
+  .section1 h3{
+    white-space: nowrap;
+    display: inline-block;
+  }
 }
 .section1-you{
   color: #a4d96c;
@@ -778,21 +783,43 @@ header {
   background-color: #f9f9f9;
 }
 
+@media (max-width: 768px) {
+  .three-image-section {
+    padding: 20px;
+  }
+}
+
 .images-row {
   display: flex;
   justify-content: space-between;
   gap: 20px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .images-row {
+    flex-direction: column;
+    gap: 15px;
+  }
 }
 
 .image-container {
-  width: 500px;         /* Fixed width */
-  height: 350px;        /* Fixed height */
+  flex: 1;
+  min-width: 200px;
+  height: 300px;        /* Height for images */
   text-align: center;
   overflow: hidden;     /* Prevent image overflow */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: 768px) {
+  .image-container {
+    height: 220px;
+    min-width: 100%;
+  }
 }
 
 .image-container img {
@@ -817,4 +844,43 @@ header {
 .center-link {
   margin-top: 30px;
   text-align: center;
+}
+
+/* Mobile overrides (placed after desktop rules so they win in cascade) */
+@media (max-width: 768px) {
+  /* Make mobile hero ~3.5/4 of viewport (87.5vh) */
+  .hero-image {
+    height: 87.5vh;
+    overflow: hidden;
+  }
+
+  /* Move overlay down and stop vertical centering so `top` is respected */
+  .section1 {
+    top: 65%; /* push overlay lower so it sits below navbar */
+    transform: translate(-50%, 0); /* don't shift up by 50% of its own height */
+    padding: 8px 6px;
+    width: calc(100% - 20px);
+  }
+
+  .section1 h3 {
+    font-size:60px;
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
+}
+
+/* Final mobile safety overrides to prevent layout shift */
+@media (max-width: 768px) {
+  .section1 {
+    position: absolute !important;
+    left: 50% !important;
+    top: 43% !important;
+    transform: translate(-50%, 0) !important;
+    z-index: 20 !important;
+  }
+
+  .section1 h3 {
+    font-size:46px !important;
+    line-height: 1.2 !important;
+  }
 }
