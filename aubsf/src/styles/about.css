@@ -1,0 +1,62 @@
+/* Base */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  background-color: #fafafa;
+  color: #222;
+}
+
+h1,h2,h3 { color: #1f2937; margin: 0 0 8px; }
+p { color: #374151; line-height: 1.6; margin: 0 0 12px; }
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, #a4d96c, #7fbf4f);
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+}
+.hero h1 { font-size: 2.4rem; margin-bottom: 12px; }
+.hero p { font-size: 1.1rem; max-width: 700px; margin: 0 auto; }
+
+/* Section */
+.section { padding: 40px 20px; max-width: 1100px; margin: 0 auto; }
+.section h2 { font-size: 1.8rem; margin-bottom: 16px; }
+
+/* Beliefs */
+.beliefs .belief { margin-bottom: 24px; }
+.beliefs blockquote {
+  border-left: 3px solid #a4d96c;
+  padding-left: 12px;
+  font-style: italic;
+  color: #1f2937;
+  background: rgba(164,217,108,0.07);
+  border-radius: 6px;
+  margin-top: 6px;
+}
+
+/* Activities Grid */
+.activity-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+.activity { padding: 16px; background: #fff; border-radius: 12px; box-shadow: 0 6px 16px rgba(0,0,0,0.08); }
+.activity h3 { margin-bottom: 6px; }
+.activity p { margin-bottom: 0; }
+
+/* Get Started */
+.get-started ul { margin: 12px 0 0 20px; }
+.get-started li { margin-bottom: 8px; }
+
+/* Footer */
+.footer { text-align: center; padding: 20px; color: #6b7280; font-size: 0.9rem; background: #f3f4f6; }
+
+/* Responsive */
+@media(min-width: 768px){
+  .activity-grid { grid-template-columns: repeat(2,1fr); }
+}
+@media(min-width: 1100px){
+  .activity-grid { grid-template-columns: repeat(3,1fr); }
+}

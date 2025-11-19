@@ -1,36 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AU-BSF</title>
-  <link rel="icon" type="image/jpg" href="/Assets/BSF_Logo.jpg">
-  <link rel="stylesheet" href="whoweare.css">
-  <link rel="stylesheet" href="style.css">
-
-  <!-- Google fonts Embed code <link> option -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
-  <link href='https://cdn.boxicons.com/3.0.3/fonts/basic/boxicons.min.css' rel='stylesheet'>
-  <link href='https://cdn.boxicons.com/3.0.3/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
-</head>
-
-<body>
-  <div class="wrapper">
+export default function Home() {
+  return (
+<div class="wrapper">
     <header>
       <div class="hero-image">
         <nav class="navpanel" aria-label="Main navigation">
           <div class="nav-container">
             <div class="logo">
               <a href="index.html" id="ollo">
-                <img src="./Assets/Logo.png" alt="Logo of AU-BSf">
+                <img src="./Assets/Logo.png" alt="Logo of AU-BSf" />
                 <span>AU-BSF</span>
               </a>
             </div>
@@ -43,7 +20,7 @@
             </div>
           </div>
         </nav>
-        <!-- Hamburger Icon for mobile -->
+        {/* <!-- Hamburger Icon for mobile --> */}
         <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false"
           aria-controls="mobileMenu">
           <span></span>
@@ -52,7 +29,7 @@
         </button>
       </div>
     </header>
-    <!-- Mobile Menu Overlay -->
+    {/* <!-- Mobile Menu Overlay --> */}
     <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
       <a href="#">New Here?</a>
       <a href="">Who We Are</a>
@@ -69,13 +46,13 @@
 
 <main class="content">
 
-  <!-- Our Identity -->
+  {/* <!-- Our Identity --> */}
   <section class="section identity">
     <h2>Our Identity</h2>
     <p>Achievers University Baptist Student Fellowship (AU-BSF) is a community of students united by one purpose: <strong>to know Christ and to make Him known</strong> in our university and beyond.</p>
   </section>
 
-  <!-- Mission -->
+  {/* <!-- Mission --> */}
   <section class="section mission">
     <h2>Our Mission</h2>
     <ul>
@@ -86,7 +63,7 @@
     </ul>
   </section>
 
-  <!-- Beliefs -->
+  {/* <!-- Beliefs --> */}
   <section class="section beliefs">
     <h2>Our Beliefs</h2>
 
@@ -119,7 +96,7 @@
     </div>
   </section>
 
-  <!-- Activities -->
+  {/* <!-- Activities --> */}
   <section class="section activities">
     <h2>What We Do</h2>
     <div class="activity-grid">
@@ -146,7 +123,7 @@
     </div>
   </section>
 
-  <!-- Get Started -->
+  {/* <!-- Get Started --> */}
   <section class="section get-started">
     <h2>Get Started on Your Faith Journey</h2>
     <p>You don’t have to walk alone. Whether new to faith or seeking to grow deeper, we’re here to guide you.</p>
@@ -159,50 +136,7 @@
     </ul>
     <blockquote>“But grow in the grace and knowledge of our Lord and Savior Jesus Christ.” — 2 Peter 3:18</blockquote>
   </section>
-
 </main>
-   <footer>
-      <div class="footer-container">
-        <div class="footer-item">
-          <a href=""><i class="bx bx-envelope"></i></a>
-          <div class="footer-title">Email</div>
-          <div class="footer-text">aubsf@gmail.com</div>
-        </div>
-
-        <div class="footer-item">
-          <a href=""><i class="bx bx-phone"></i></a>
-          <div class="footer-title">Church Office</div>
-          <div class="footer-text">+234-906-85696</div>
-        </div>
-
-        <div class="footer-item">
-          <a href=""><i class="bx bx-location"></i></a>
-          <div class="footer-title">
-            Law Building Class IV, inside the Achievers University Campus <br>
-            Owo, Ondo State, Nigeria,
-          </div>
-          <div class="footer-text">AU-BSF</div>
-        </div>
-
-        <div class="footer-item">
-          <a href=""><i class="bx bx-credit-card-alt"></i></a>
-          <div class="footer-title">Give</div>
-          <div class="footer-text">Give Online</div>
-        </div>
-      </div>
-
-      <div class="socials">
-        <a href=""><i class="bxl bx-instagram"></i></a>
-        <a href=""><i class="bxl bx-youtube"></i></a>
-      </div>
-
-      <div class="copyright">
-        © 2025 AU-BSF<br>
-        <p>JOE</p>
-      </div>
-    </footer>
-  </div>
-  <script src="app.js"></script>
-</body>
-
-</html>
+</div>
+  );
+}
