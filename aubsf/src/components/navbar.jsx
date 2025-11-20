@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "../styles/navbar.css";
 import Logo from "../Assets/Logo.png";
 
-export default function Navbar() {
+export default function navbar() {
 
   const [isOpen, setIsOpen] = useState(false);
 

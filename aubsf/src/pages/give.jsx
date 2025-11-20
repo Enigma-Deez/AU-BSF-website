@@ -1,44 +1,7 @@
 import { Link } from "react-router";
-export default function Home() {
+export default function give() {
   return (
 <div className="wrapper">
-    <header>
-      <div className="hero-image">
-        <nav className="navpanel" aria-label="Main navigation">
-          <div className="nav-container">
-            <div className="logo">
-              <a href="index.html" id="ollo">
-                <img src="./Assets/Logo.png" alt="Logo of AU-BSf" />
-                <span>AU-BSF</span>
-              </a>
-            </div>
-            <div className="navbar">
-              <a href="">New Here?</a>
-              <a href="">Who We Are</a>
-              <a href="">Events</a>
-              <a href="gallery.html">Gallery</a>
-              <a href="give.html">Give</a>
-            </div>
-          </div>
-        </nav>
-        {/* <!-- Hamburger Icon for mobile --> */}
-        <button className="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false"
-          aria-controls="mobileMenu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-    </header>
-    {/* <!-- Mobile Menu Overlay --> */}
-    <div className="mobile-menu" id="mobileMenu" aria-hidden="true">
-      <a href="#">New Here?</a>
-      <a href="">Who We Are</a>
-      <a href="">Events</a>
-      <a href="">Gallery</a>
-      <a href="">Give</a>
-    </div>
-    
     {/* <!-- Page Replica Section --> */}
 <section className="replica-section">
   <div className="hero-replica">

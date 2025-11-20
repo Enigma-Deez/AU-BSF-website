@@ -1,50 +1,7 @@
 import { Link } from "react-router";
-export default function Home() {
+export default function about() {
   return (
 <div class="wrapper">
-    <header>
-      <div class="hero-image">
-        <nav class="navpanel" aria-label="Main navigation">
-          <div class="nav-container">
-            <div class="logo">
-              <a href="index.html" id="ollo">
-                <img src="./Assets/Logo.png" alt="Logo of AU-BSf" />
-                <span>AU-BSF</span>
-              </a>
-            </div>
-            <div class="navbar">
-              <a href="newhere.html">New Here?</a>
-              <a href="whoweare.html">Who We Are</a>
-              <a href="">Events</a>
-              <a href="gallery.html">Gallery</a>
-              <a href="give.html">Give</a>
-            </div>
-          </div>
-        </nav>
-        {/* <!-- Hamburger Icon for mobile --> */}
-        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false"
-          aria-controls="mobileMenu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-    </header>
-    {/* <!-- Mobile Menu Overlay --> */}
-    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
-      <a href="#">New Here?</a>
-      <a href="">Who We Are</a>
-      <a href="">Events</a>
-      <a href="">Gallery</a>
-      <a href="">Give</a>
-    </div>
-<header class="hero">
-  <div class="hero-content">
-    <h1>Who We Are</h1>
-    <p>AU-BSF is a Christ-centered community committed to loving God, growing in faith, and living out the gospel.</p>
-  </div>
-</header>
-
 <main class="content">
 
   {/* <!-- Our Identity --> */}

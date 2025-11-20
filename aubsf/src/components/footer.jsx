@@ -1,5 +1,5 @@
 import "../styles/footer.css"
-function Navbar() {
+function footer() {
   return (
     <footer>
       <div className="footer-container">

@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-export default function Home() {
+export default function gallery() {
   return (
 <div className="wrapper">
 

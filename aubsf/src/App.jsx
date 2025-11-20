@@ -1,11 +1,11 @@
 import { Routes, Route } from "react-router-dom";
-import Navbar from "./components/navbar";
-import Footer from "./components/footer"
-import Home from "./pages/home";
-import NewHere from "./pages/newHere";
-import WhoWeAre from "./pages/about";
-import Gallery from "./pages/gallery";
-import Give from "./pages/give";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer"
+import Home from "./pages/Home";
+import NewHere from "./pages/NewHere";
+import WhoWeAre from "./pages/About";
+import Gallery from "./pages/Gallery";
+import Give from "./pages/Give";
 
 export default function App() {
   return (
