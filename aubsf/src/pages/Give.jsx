@@ -1,5 +1,5 @@
-import { Link } from "react-router";
-export default function give() {
+import { Link } from "react-router-dom";
+export default function Give() {
   return (
 <div className="wrapper">
     {/* <!-- Page Replica Section --> */}
@@ -11,7 +11,6 @@ export default function give() {
     <div className="replica-content">
       <h3>Support the Ministry of AU-BSF</h3>
       <p>We invite you to partner with us in spreading truth, beauty, and goodness through your generous giving.</p>
-      <img src="./Assets/give.jpg" alt="" />
       <br /><br /><br /><br /><br />
      </div>
   </div>

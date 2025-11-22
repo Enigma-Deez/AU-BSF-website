@@ -1,5 +1,6 @@
-import { Link } from "react-router";
-export default function gallery() {
+import { Link } from "react-router-dom";
+import service from "../Assets/group-1.jpg";
+export default function Gallery() {
   return (
 <div className="wrapper">
 
@@ -11,26 +12,26 @@ export default function gallery() {
     <div className="gallery-row">
       <div className="category-card">
         <div className="image-stack">
-          <img src="./Assets/service.jpg" className="img-back" alt="" />
-          <img src="./Assets/service.jpg" className="img-main" alt="" />
+          <img src={service} className="img-back" alt="" />
+          <img src={service} className="img-back" alt="" /> 
         </div>
         <div className="category-info">
           <h3>Picnics</h3>
           <p>Relaxing moments together as we celebrate community and togetherness.</p>
-          <a href="#" className="category-btn">View Gallery</a>
+          <Link to="/" className="category-btn">View Gallery</Link>
         </div>
       </div>
 
       {/* <!-- CATEGORY 2 --> */}
       <div className="category-card">
         <div className="image-stack">
-          <img src="./Assets/service.jpg" className="img-back" alt="" />
-          <img src="./Assets/service.jpg" className="img-main" alt="" />
+          <img src={service} className="img-back" alt="" />
+          <img src={service} className="img-main" alt="" />
         </div>
         <div className="category-info">
           <h3>Outreach & Evangelism</h3>
           <p>Going out to share God’s love across campus and in our community. Moments of boldness and compassion.</p>
-          <a href="#" className="category-btn">View Gallery</a>
+          <Link to="/" className="category-btn">View Gallery</Link>
         </div>
       </div>
     </div>
@@ -45,7 +46,7 @@ export default function gallery() {
         <div className="category-info">
           <h3>Sunday Services</h3>
           <p>Weekly gatherings filled with the Word, worship, fellowship, and spiritual growth.</p>
-          <a href="#" className="category-btn">View Gallery</a>
+          <Link to="/" className="category-btn">View Gallery</Link>
         </div>
       </div>
 
@@ -57,7 +58,7 @@ export default function gallery() {
         <div className="category-info">
           <h3>Choir Ministry</h3>
           <p>A team of passionate worshipers lifting hearts to God through song and music.</p>
-          <a href="#" className="category-btn">View Gallery</a>
+          <Link to="/" className="category-btn">View Gallery</Link>
         </div>
       </div>
     </div>

@@ -1,7 +1,7 @@
-import { Link } from "react-router";
-export default function newhere() {
+import { Link } from "react-router-dom";
+export default function NewHere() {
   return (
-    <div classNameName="wrapper">
+    <div className="wrapper">
 <section className="new-here" aria-labelledby="new-here-title">
   <div className="container">
 
@@ -55,6 +55,7 @@ export default function newhere() {
     </div>
 
     <div className="new-here-right" aria-hidden="false">
+      {/* I don't even have these images */}
       <div className="image-stack" role="img" aria-label="People gathered worshipping and fellowshipping">
         <img src="assets/event-back-2.jpg" alt="" className="stack back back-2" />
         <img src="assets/event-back-1.jpg" alt="" className="stack back back-1" />

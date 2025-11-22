@@ -1,17 +1,17 @@
-import { Link } from "react-router";
-export default function about() {
+import { Link } from "react-router-dom";
+export default function About() {
   return (
-<div class="wrapper">
-<main class="content">
+<div classNameName="wrapper">
+<main className="content">
 
   {/* <!-- Our Identity --> */}
-  <section class="section identity">
+  <section className="section identity">
     <h2>Our Identity</h2>
     <p>Achievers University Baptist Student Fellowship (AU-BSF) is a community of students united by one purpose: <strong>to know Christ and to make Him known</strong> in our university and beyond.</p>
   </section>
 
   {/* <!-- Mission --> */}
-  <section class="section mission">
+  <section className="section mission">
     <h2>Our Mission</h2>
     <ul>
       <li>Encourage students to build a personal relationship with Jesus Christ.</li>
@@ -22,59 +22,59 @@ export default function about() {
   </section>
 
   {/* <!-- Beliefs --> */}
-  <section class="section beliefs">
+  <section className="section beliefs">
     <h2>Our Beliefs</h2>
 
-    <div class="belief">
+    <div className="belief">
       <h3>God’s Word</h3>
       <p>We believe the Bible is God’s inspired Word—our guide for faith and life.</p>
       <blockquote>“Your word is a lamp to my feet and a light to my path.” — Psalm 119:105</blockquote>
     </div>
 
-    <div class="belief">
+    <div className="belief">
       <h3>Salvation Through Christ</h3>
       <p>We believe salvation comes only through Jesus Christ, who died and rose again for eternal life.</p>
       <blockquote>“For God so loved the world…” — John 3:16</blockquote>
     </div>
 
-    <div class="belief">
+    <div className="belief">
       <h3>The Holy Spirit</h3>
       <p>We believe the Holy Spirit empowers and transforms the lives of believers daily.</p>
     </div>
 
-    <div class="belief">
+    <div className="belief">
       <h3>Christian Community</h3>
       <p>We believe believers grow best in fellowship, accountability, and shared worship.</p>
       <blockquote>“As iron sharpens iron, so one person sharpens another.” — Proverbs 27:17</blockquote>
     </div>
 
-    <div class="belief">
+    <div className="belief">
       <h3>Purposeful Living</h3>
       <p>We believe every student has a God-given calling, and AU-BSF exists to help them walk in it.</p>
     </div>
   </section>
 
   {/* <!-- Activities --> */}
-  <section class="section activities">
+  <section className="section activities">
     <h2>What We Do</h2>
-    <div class="activity-grid">
-      <div class="activity">
+    <div className="activity-grid">
+      <div className="activity">
         <h3>Weekly Services</h3>
         <p>Worship, prayer, and teaching to encounter God and grow spiritually.</p>
       </div>
-      <div class="activity">
+      <div className="activity">
         <h3>Small Groups</h3>
         <p>Interactive gatherings for accountability, study, and discipleship.</p>
       </div>
-      <div class="activity">
+      <div className="activity">
         <h3>Prayer Meetings</h3>
         <p>Dedicated sessions to stand in prayer for our campus, lives, and the world.</p>
       </div>
-      <div class="activity">
+      <div className="activity">
         <h3>Outreach & Missions</h3>
         <p>Evangelism and community service that spreads the love of Christ.</p>
       </div>
-      <div class="activity">
+      <div className="activity">
         <h3>Events & Fellowships</h3>
         <p>Social gatherings, picnics, and special programs that strengthen our community.</p>
       </div>
@@ -82,7 +82,7 @@ export default function about() {
   </section>
 
   {/* <!-- Get Started --> */}
-  <section class="section get-started">
+  <section className="section get-started">
     <h2>Get Started on Your Faith Journey</h2>
     <p>You don’t have to walk alone. Whether new to faith or seeking to grow deeper, we’re here to guide you.</p>
     <ul>
