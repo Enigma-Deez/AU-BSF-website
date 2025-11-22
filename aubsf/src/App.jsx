@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
@@ -11,8 +11,9 @@ import Events from "./pages/Events";
 
 export default function App() {
   return (
-    <>
+    <BrowserRouter>
       <Navbar />
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/new-here" element={<NewHere />} />
@@ -21,7 +22,8 @@ export default function App() {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/give" element={<Give />} />
       </Routes>
+
       <Footer />
-    </>
+    </BrowserRouter>
   );
 }
