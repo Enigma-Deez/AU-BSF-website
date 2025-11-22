@@ -1,35 +1,37 @@
 /* GIVE PAGE */
-    .replica-section {
-  padding: 60px 20px;
+.give-hero {
+  position: relative;
+  padding: 120px 20px 80px;
   background-color: #7F7F7F;
   text-align: center;
   font-family: 'Lora', serif;
 }
 
-.hero-replica h2 {
+.give-hero h2 {
   font-size: 1.8rem;
   margin-bottom: 10px;
   color: white;
 }
 
-.hero-replica p {
+.give-hero p {
   font-size: 1.2rem;
   color: white;
 }
 
-.replica-content {
+.give-hero-content {
   margin-top: 30px;
 }
 
-.replica-content h3 {
+.give-hero-content h3 {
   font-size: 1.5rem;
   margin-bottom: 10px;
   color: white;
 }
 
-.replica-content p {
+.give-hero-content p {
   font-size: 1rem;
   margin-bottom: 20px;
+  color: white;
 }
 
 .ways-to-give {
