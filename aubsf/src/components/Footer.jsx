@@ -33,12 +33,33 @@ function Footer() {
           {/* INTERNAL ROUTE → Correct usage */}
           <Link to="/give">
             <i className="bx bx-credit-card-alt"></i>
-          </Link>
           <div className="footer-title">Give</div>
           <div className="footer-text">Give Online</div>
+          </Link>
         </div>
-
       </div>
+      
+      {/* Feedback Form */}
+        <div className="footer-item feedback">
+          <div className="footer-title">Send Feedback</div>
+          <form 
+            action="https://formspree.io/f/YOUR_FORM_ID" 
+            method="POST"
+          >
+            <input 
+              type="email" 
+              name="email" 
+              placeholder="Your Email" 
+              required 
+            />
+            <textarea 
+              name="message" 
+              placeholder="Your Message" 
+              required
+            ></textarea>
+            <button type="submit">Send</button>
+          </form>
+        </div>
 
       <div className="socials">
         {/* EXTERNAL LINKS → Must use <a> */}
@@ -64,3 +85,4 @@ function Footer() {
 }
 
 export default Footer;
+

@@ -1,27 +1,71 @@
 /* ===== NAVBAR & NAVIGATION (Desktop & Mobile) ===== */
 
 /* Navigation bar styling (overlay on hero image) */
+/* Sticky effect and auto-hide */
+/* Navbar wrapper */
 .navpanel {
-  position: absolute;
-  top: 16px;
+  width: 100%;
+  padding: 1rem 2rem;
+  position: fixed; /* stays on top */
+  top: 0;
   left: 0;
-  right: 0;
-  z-index: 20;
-  display: flex;
-  justify-content: center;
-  pointer-events: auto;
-  background: transparent;
+  z-index: 2000;
+  background: transparent; /* transparent like original */
+  border-bottom: none; /* remove line */
+  box-sizing: border-box;
 }
 
 .nav-container {
-  width: 100%;
-  max-width: 1200px;
-  padding: 0 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1300px;
+  margin: auto;
+  padding: 0 20px;
   box-sizing: border-box;
+  flex-wrap: wrap;
 }
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-shrink: 0;
+}
+
+.logo img {
+  height: 45px;
+  width: auto;
+}
+
+.logo span {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 1px;
+}
+
+/* Desktop nav links */
+.navbar {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap; /* allows links to wrap */
+}
+
+.navbar a {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  text-decoration: none;
+  white-space: nowrap; /* prevent links from breaking */
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #a4d96c;
+}
+
+
 
 /* Logo styling */
 .logo {
@@ -176,4 +220,14 @@
 
 .mobile-menu.active {
   transform: translateY(0);
+}
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .navbar {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
 }

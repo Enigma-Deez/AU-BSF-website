@@ -22,15 +22,16 @@ export default function Give() {
 
           <div className="give-method">
             <h3>Direct Deposit</h3>
+            <i class='bx  bx-credit-card-alt'></i> 
             <p><strong>AU-BSF Church Account</strong><br />
-            BSB: 032 032<br />
-            A/N: 811 496</p>
+            MONIE POINT<br />
+            5005 4317 57 <br />Susan Ibiloye Oyediran </p>
           </div>
-          
-          <div className="give-method">
-            <h3>Cheque</h3>
-            <p>Payable to <strong>AU-BSF Church</strong><br />
-            Post: Law Building Class IV, Achievers University Campus, Owo, Ondo State, Nigeria</p>
+
+            <div className="give-method">
+            <h3>In Person</h3>
+            <i class='bx  bx-user'></i> 
+            <p>Give during Sunday morning worship or any of our midweek services.</p>
           </div>
         </div>
       </section>
